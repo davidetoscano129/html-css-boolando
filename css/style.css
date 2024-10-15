@@ -1,93 +1,229 @@
-/* Reset di base */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Stile header */
+img {
+    width: 100%;
+    display: block;
+}
+
+/* STRUMENTI */
+header,
+footer,
+section,
+nav,
+a,
+div,
+p,
+img,
+h1,
+h2 {
+    /*border: 1px solid red; */
+    padding: 5px;
+}
+
+/* CUSTOM VARIABLES */
+:root {
+    --color-header: #ff6900;
+    --color-discount: #ff0000;
+    --color-footer: #1a1a1a;
+    --color-eco: #008000;
+}
+
+/* ASSETS */
 header {
-    background-color: #ff6900;
+    background-color: var(--color-header);
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
 }
 
-header nav a {
-    margin: 0 10px;
+main {
+    padding-top: 40px;
+}
+
+footer {
+    background-color: var(--color-footer);
+    color: white;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
     color: white;
     text-decoration: none;
 }
 
-header nav a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* Stile main */
+i {
+    color: white;
+}
+
+i:hover {
+    transform: scale(1.5);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
-.row {
+#logo {
+    width: 200px;
+}
+
+.nav {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.col {
-    width: calc(33.33% - 20px);
-}
-
-.product {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-}
-
-.product img {
-    width: 100%;
-    max-width: 200px;
-}
-
-.product p {
-    margin-top: 10px;
-}
-
-.brand {
     font-weight: bold;
 }
 
-.price {
-    margin-top: 10px;
+.prod {
+    font-weight: bold;
 }
 
-.current-price {
+.pre {
     font-weight: bold;
     color: red;
 }
 
-.old-price {
+.sco,
+.eco {
+    display: inline;
+    color: white;
+}
+
+.sco {
+    background-color: var(--color-discount);
+}
+
+.sco€ {
     text-decoration: line-through;
+}
+
+.eco {
+    background-color: var(--color-eco);
+}
+
+h2,
+h1 {
+    font-size: 80%;
+}
+
+div.info>a {
+    font-size: 50%;
+}
+
+/* FLEX */
+.info {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+#coda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.al-it-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+}
+
+.col {
+    width: calc((100% - 15px) / 3);
+}
+
+.money {
+    display: flex;
+    gap: 20px;
+}
+
+#social-dad {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.har {
     color: grey;
+    display: inline-block;
 }
 
-/* Stile footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* POSITIONING */
+.win {
+    position: relative;
+    width: 100%;
+    z-index: 730;
 }
 
-footer nav a {
-    margin: 0 5px;
-    color: white;
-    text-decoration: none;
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+}
+
+.win:hover img.back {
+    display: block;
+    z-index: 750;
+}
+
+.sco,
+.eco,
+.har {
+    position: absolute;
+}
+
+.sco,
+.eco,
+.har {
+    z-index: 800;
+}
+
+.har {
+    top: 15px;
+    right: 0px;
+    transform: translateX(-100%);
+    font-size: 150%;
+}
+
+.sco,
+.eco {
+    bottom: 10px;
+    transform: translateY(-100%);
+}
+
+.sco {
+    left: 30px;
+}
+
+.eco {
+    left: 90px;
 }
