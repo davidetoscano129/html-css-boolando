@@ -1,0 +1,72 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Stile header */
+header {
+    background-color: #ff6900;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Stile main */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.product {
+    width: calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.product p {
+    margin-top: 10px;
+}
+
+/* Stile footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer nav a {
+    margin: 0 5px;
+    color: white;
+    text-decoration: none;
+}
