@@ -41,8 +41,11 @@ header nav a:hover {
     margin-bottom: 30px;
 }
 
-.product {
+.col {
     width: calc(33.33% - 20px);
+}
+
+.product {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
@@ -55,6 +58,24 @@ header nav a:hover {
 
 .product p {
     margin-top: 10px;
+}
+
+.brand {
+    font-weight: bold;
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.current-price {
+    font-weight: bold;
+    color: red;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: grey;
 }
 
 /* Stile footer */
